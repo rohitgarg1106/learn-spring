@@ -10,8 +10,13 @@ public class SquashCoach implements Coach {
 
     private FortuneService fortuneService;
 
+
+    public SquashCoach(){
+
+    }
+
     @Autowired
-    public SquashCoach(FortuneService fortuneService){
+    public void setFortuneService(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 
