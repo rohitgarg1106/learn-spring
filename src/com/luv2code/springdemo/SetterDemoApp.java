@@ -10,6 +10,9 @@ public class SetterDemoApp {
 
         //retrieve bean from spring
         Coach coach = context.getBean("myCricketCoach", CricketCoach.class);
+        Coach newCoach = context.getBean("myCricketCoach", CricketCoach.class);
+boolean result = coach == newCoach;
+        System.out.println("\n Pointing to same object?: " + result);
 
         //call methods on bean
         System.out.println(coach.getDailyWorkout());
