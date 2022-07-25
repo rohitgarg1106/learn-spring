@@ -7,6 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!--    load the properties file: sport.properties -->
+    <context:property-placeholder location="classpath:sport.properties" />
     <!-- Define your beans here -->
     <bean id ="myFortune"
     class="com.luv2code.springdemo.HappyFortuneService">
@@ -20,8 +22,8 @@
     <bean id="myCricketCoach"
     class="com.luv2code.springdemo.CricketCoach">
         <property name="fortuneService" ref="myFortune"/>
-        <property name="name" value="Harry Sighs"/>
-        <property name="salary" value="10000"/>
+        <property name="name" value="${foo.name}"/>
+        <property name="salary" value="${foo.salary}"/>
 
 
     </bean>
