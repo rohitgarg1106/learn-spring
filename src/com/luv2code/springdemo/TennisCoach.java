@@ -8,23 +8,14 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 
 
+    @Autowired
     private FortuneService fortuneService;
 
 
     public TennisCoach(){
-
+        System.out.println("I am inside default constructor");
     }
 
-    @Autowired
-    public void setFortuneService(FortuneService fortuneService) {
-        this.fortuneService = fortuneService;
-    }
-
-    @Autowired
-    public void doSomeCrazyStuff(FortuneService fortuneService){
-        System.out.println("I am inside crazy stuff\n");
-        this.fortuneService = fortuneService;
-    }
     @Override
     public String getDailyWorkout(){
         return "Practice smash for 50 minutes";
