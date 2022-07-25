@@ -1,6 +1,7 @@
 package com.luv2code.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 //bean id = thatSillyCoach
@@ -16,6 +17,7 @@ public class SquashCoach implements Coach {
     }
 
     @Autowired
+    @Qualifier("randomService")
     public void setFortuneService(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
