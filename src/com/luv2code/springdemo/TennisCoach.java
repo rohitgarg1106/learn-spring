@@ -19,6 +19,12 @@ public class TennisCoach implements Coach {
     public void setFortuneService(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
+
+    @Autowired
+    public void doSomeCrazyStuff(FortuneService fortuneService){
+        System.out.println("I am inside crazy stuff\n");
+        this.fortuneService = fortuneService;
+    }
     @Override
     public String getDailyWorkout(){
         return "Practice smash for 50 minutes";
